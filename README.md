@@ -1,5 +1,5 @@
 npm i
-npm run dev
+<div>npm run dev</div>
 
 instrucciones
 http://localhost:3000/
