@@ -1,0 +1,90 @@
+<div>
+    <h2>Inicializar un partido</h2>
+    <div>http://localhost:3000/fixture </div>
+    post params : 
+    <ul>
+        <li>team1 : nombre del equipo local</li>
+        <li>team2 : nombre del equipo visitante</li>
+        <li>location : nombre de el estadio</li>
+        <li>time : hora que inicia el partido</li>
+    </ul>
+</div>
+      
+<div>
+    <h2>Registra a un nuevo jugador de un equipo</h2>
+    <div>http://localhost:3000/fixture/team/player</div>
+    post params : 
+    <ul>
+        <li>id_fixture : id de el partido</li>
+        <li>team : nombre del equipo</li>
+        <li>player : nombre del jugador</li>
+    </ul>
+</div>
+
+<div>
+    <h2>Registra el gol de un jugador de un equipo</h2>
+    <div>http://localhost:3000/fixture/team/player/gol</div>
+    post params : 
+    <ul>
+        <li>id_fixture : id de el partido</li>
+        <li>team : nombre del equipo</li>
+        <li>player : nombre del jugador</li>
+        <li>time : timestamp del gol</li>
+    </ul>
+</div>
+
+<div>
+    <h2>Registra tarjeta roja de un jugador de un equipo</h2>
+    <div>http://localhost:3000/fixture/team/player/roja</div>
+    post params : 
+    <ul>
+        <li>id_fixture : id de el partido</li>
+        <li>team : nombre del equipo</li>
+        <li>player : nombre del jugador</li>
+        <li>time : timestamp del gol</li>
+    </ul>
+</div>
+
+<div>
+    <h2>Registra tarjeta amarilla de un jugador de un equipo</h2>
+    <div>http://localhost:3000/fixture/team/player/amarilla</div>
+    post params : 
+    <ul>
+        <li>id_fixture : id de el partido</li>
+        <li>team : nombre del equipo</li>
+        <li>player : nombre del jugador</li>
+        <li>time : timestamp del gol</li>
+    </ul>
+</div>
+
+<div>
+    <h2>Pagina web del partido</h2>
+    <div>http://localhost:3000/fixture?id_fixture=5e26ee83051cdb17fccd88bf</div>
+</div>
+
+<div>
+    <h2>Recuperar jugadores equipo local</h2>
+    <div>http://localhost:3000/fixture/team1?id_fixture=5e26ee83051cdb17fccd88bf</div>
+</div>
+<div>
+    <h2>Recuperar jugadores equipo visitante</h2>
+    <div>http://localhost:3000/fixture/team2?id_fixture=5e26ee83051cdb17fccd88bf</div>
+</div>
+<div>
+    <h2>Recuperar Goles</h2>
+    <div>http://localhost:3000/fixture/goles?id_fixture=5e26ee83051cdb17fccd88bf</div>
+</div>
+<div>
+    <h2>Recuperar Tarjetas amarillas</h2>
+    <div>http://localhost:3000/fixture/amarillas?id_fixture=5e26ee83051cdb17fccd88bf</div>
+</div>
+<div>
+    <h2>Recuperar Tarjetas rojas</h2>
+    <div>http://localhost:3000/fixture/rojas?id_fixture=5e26ee83051cdb17fccd88bf</div>
+</div>
+
+
+
+
+
+

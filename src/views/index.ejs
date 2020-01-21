@@ -1,0 +1,86 @@
+<h1>Partido</h1>
+
+<h2><%= team1 %> vs <%= team2 %></h2>
+<div>
+    <b><%= team1 %></b>
+    <div id='team1'>
+        
+    </div>
+    
+</div>
+
+<div>
+    <b><%= team2 %></b>
+    <div id='team2'>
+        
+    </div>
+    
+</div>
+
+<div>
+    <h3>Goles</h3>
+    <div id='goles'></div>
+</div>
+
+<div>
+    <h3>Tarjetas Amarillas</h3>
+    <div id='amarillas'></div>
+</div>
+
+<div>
+    <h3>Tarjetas Rojas</h3>
+    <div id='rojas'></div>
+</div>
+
+
+<script>
+    
+    var xhttp1 = new XMLHttpRequest();
+    xhttp1.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("team1").innerHTML = this.responseText;
+        }
+    }
+    var xhttp2 = new XMLHttpRequest();
+    xhttp2.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("team2").innerHTML = this.responseText;
+        }
+    }
+    var xhttpGoles = new XMLHttpRequest();
+    xhttpGoles.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("goles").innerHTML = this.responseText;
+        }
+    }
+    var xhttpAmarillas = new XMLHttpRequest();
+    xhttpAmarillas.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("amarillas").innerHTML = this.responseText;
+        }
+    }
+    var xhttpRojas = new XMLHttpRequest();
+    xhttpRojas.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("rojas").innerHTML = this.responseText;
+        }
+    }
+
+    setInterval(() => {
+        xhttp1.open("GET", "http://localhost:3000/fixture/team1?id_fixture=5e26ee83051cdb17fccd88bf", true);
+        xhttp1.send();
+        xhttp2.open("GET", "http://localhost:3000/fixture/team2?id_fixture=5e26ee83051cdb17fccd88bf", true);
+        xhttp2.send();
+        xhttpGoles.open("GET", "http://localhost:3000/fixture/goles?id_fixture=5e26ee83051cdb17fccd88bf", true);
+        xhttpGoles.send();
+        xhttpAmarillas.open("GET", "http://localhost:3000/fixture/amarillas?id_fixture=5e26ee83051cdb17fccd88bf", true);
+        xhttpAmarillas.send();
+        xhttpRojas.open("GET", "http://localhost:3000/fixture/rojas?id_fixture=5e26ee83051cdb17fccd88bf", true);
+        xhttpRojas.send();
+    }, 3000);
+
+    
+
+
+
+</script>
